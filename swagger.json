@@ -1,25 +1,25 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Poppin Soda API",
-    "description": "The backedn service for Poppin sodas.  The website can be accessed at: https://mdowns1999.github.io/poppin-soda/",
+    "title": "RouteScout Trips API",
+    "description": "Backend service for the RouteScout web app. Stores and retrieves trip data including stops, routes, and preferences.",
     "version": "1.0.0"
   },
-  "host": "poppinsodasbackend.onrender.com",
+  "host": "routescoutbackend.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
   ],
   "paths": {
-    "/sodas/": {
-      "get": {
-        "description": "Get all Soda Drinks from the database.",
-        "produces": [
-          "application/json"
+    "/api/trips/": {
+      "post": {
+        "tags": [
+          "Trips"
         ],
+        "description": "Create a new trip and return its ID.",
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
@@ -27,12 +27,12 @@
         }
       }
     },
-    "/sodas/{id}": {
+    "/api/trips/{id}/share": {
       "get": {
-        "description": "Get One Soda Drink from the database.",
-        "produces": [
-          "application/json"
+        "tags": [
+          "Trips"
         ],
+        "description": "Retrieve a single trip by its MongoDB ObjectId.",
         "parameters": [
           {
             "name": "id",
@@ -45,93 +45,18 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "404": {
+            "description": "Not Found"
           }
         }
       }
     },
-    "/custom/": {
+    "/api/trips/{id}": {
       "get": {
-        "description": "Get Ingredients for the drinks from the database.",
-        "produces": [
-          "application/json"
+        "tags": [
+          "Trips"
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      }
-    },
-    "/orders/": {
-      "get": {
-        "description": "Get All Orders from the database.",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "post": {
-        "description": "Post an order to the database.",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "order_id": {
-                  "example": "any"
-                },
-                "name": {
-                  "example": "any"
-                },
-                "order_num": {
-                  "example": "any"
-                },
-                "phone": {
-                  "example": "any"
-                },
-                "notes": {
-                  "example": "any"
-                },
-                "cart": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "202": {
-            "description": "Accepted"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/orders/{id}": {
-      "get": {
-        "description": "Get One Order by ID from the database.",
-        "produces": [
-          "application/json"
-        ],
+        "description": "Retrieve a single trip by its MongoDB ObjectId.",
         "parameters": [
           {
             "name": "id",
@@ -144,64 +69,52 @@
           "200": {
             "description": "OK"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "404": {
+            "description": "Not Found"
           }
         }
-      }
-    },
-    "/reviews/": {
-      "get": {
-        "description": "Get All Reviews from the database.",
-        "produces": [
-          "application/json"
+      },
+      "put": {
+        "tags": [
+          "Trips"
+        ],
+        "description": "Partially update a trip by its MongoDB ObjectId.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
         ],
         "responses": {
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "Bad Request"
+          "404": {
+            "description": "Not Found"
           }
         }
       },
-      "post": {
-        "description": "Post a review to the database",
+      "delete": {
+        "tags": [
+          "Trips"
+        ],
+        "description": "Delete a trip by its MongoDB ObjectId.",
         "parameters": [
           {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "example": "any"
-                },
-                "name": {
-                  "example": "any"
-                },
-                "rating": {
-                  "example": "any"
-                },
-                "message": {
-                  "example": "any"
-                },
-                "date": {
-                  "example": "any"
-                }
-              }
-            }
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
-          "202": {
-            "description": "Accepted"
+          "200": {
+            "description": "OK"
           },
-          "422": {
-            "description": "Unprocessable Entity"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "404": {
+            "description": "Not Found"
           }
         }
       }

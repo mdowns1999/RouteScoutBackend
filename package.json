@@ -1,7 +1,7 @@
 {
-  "name": "RouteScout Backend",
-  "version": "1.0.4",
-  "description": "Backend to Soda Web App",
+  "name": "route-scout-backend",
+  "version": "1.0.0",
+  "description": "Backend to RouteScout Web App",
   "main": "server.js",
   "scripts": {
     "test": "jest",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdowns1999/sodaBackend.git"
+    "url": "git+https://github.com/mdowns1999/RouteScoutBackend.git"
   },
   "author": "Mike Downs",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mdowns1999/sodaBackend/issues"
+    "url": "https://github.com/mdowns1999/RouteScoutBackend/issues"
   },
-  "homepage": "https://github.com/mdowns1999/sodaBackend#readme",
+  "homepage": "https://github.com/mdowns1999/RouteScoutBackend#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",

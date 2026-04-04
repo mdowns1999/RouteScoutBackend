@@ -3,10 +3,10 @@ const swaggerAutogen = require("swagger-autogen")();
 
 const doc = {
   info: {
-    title: "Poppin Soda API",
-    description: "The backedn service for Poppin sodas.  The website can be accessed at: https://mdowns1999.github.io/poppin-soda/",
+    title: "RouteScout Trips API",
+    description: "Backend service for the RouteScout web app. Stores and retrieves trip data including stops, routes, and preferences.",
   },
-  host: "poppinsodasbackend.onrender.com",
+  host: "routescoutbackend.onrender.com",
   schemes: ["https"],
 };
 
