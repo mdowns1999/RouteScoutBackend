@@ -1,14 +1,14 @@
-# Poppin Soda Backend Overview
+# RouteScout Backend Overview
 
-Welcome to the backend portion of the Poppin Soda website! For this backend code, I used Node and Express to create all my routes.  I used Jest to test if my routes responded to any hits on them.  I also used Swagger API to create the documentation for it.  Feel free to look at the code and the swagger documentation!
+Welcome to the backend for RouteScout! This backend is built with Node and Express to handle all API routes for saving, loading, updating, and deleting road trip plans. I used MongoDB for the database, Jest and Supertest for route testing, and Swagger for API documentation.
 
-* [Poppin Soda Swagger API Docs](https://poppinsodasbackend.onrender.com/api-docs/#/)
-* [Poppin Soda Frontend Code](https://github.com/mdowns1999/poppin-soda)
-* [Poppin Soda Live Website](https://mdowns1999.github.io/poppin-soda/)
+* [RouteScout Live Website](https://mdowns1999.github.io/RouteScout/)
+* [RouteScout API Docs](https://routescoutbackend.onrender.com/api-docs/)
+* [RouteScout Frontend Repo](https://github.com/mdowns1999/RouteScout)
 
-# Development Environment 
+# Development Environment
 
-The environment I used for this project was Visual Studio Code by Microsoft.  The Web Page was deployed on GitHub.  This project used Node JS, Express JS, and JavaScript.  I also  used Swagger to create my API documentation.  I deployed my backend on Render and my database on MongoDB. These services worked well for this project.  Feel free to check out their websites to learn more.
+The environment I used for this project was Visual Studio Code by Microsoft. The frontend is deployed on GitHub Pages and the backend is deployed on Render with a MongoDB Atlas database. This project uses Node.js, Express.js, and JavaScript. Swagger is used to document the API.
 
 # Useful Websites
 * [MongoDB Website](https://www.mongodb.com/)
