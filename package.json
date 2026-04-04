@@ -1,0 +1,37 @@
+{
+  "name": "RouteScout Backend",
+  "version": "1.0.4",
+  "description": "Backend to Soda Web App",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "swagger-autogen": "node ./swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdowns1999/sodaBackend.git"
+  },
+  "author": "Mike Downs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdowns1999/sodaBackend/issues"
+  },
+  "homepage": "https://github.com/mdowns1999/sodaBackend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "mongodb": "^6.21.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "supertest": "^7.1.4"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
