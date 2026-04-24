@@ -14,6 +14,7 @@ const stopSchema = Joi.object({
   phone: Joi.string().allow(null, ""),
   description: Joi.string().allow(null, ""),
   mapsUrl: Joi.string().allow(null, ""),
+  priceLevel: Joi.number().integer().min(0).max(4),
 });
 
 const tripSchema = Joi.object({
